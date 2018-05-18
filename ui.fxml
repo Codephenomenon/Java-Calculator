@@ -12,7 +12,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.paint.Color?>
 
-<VBox spacing="10" prefWidth="400" prefHeight="400" fx:controller="application.Controller" xmlns:fx="http://javafx.com/fxml">
+<VBox spacing="10" prefWidth="400" prefHeight="450" fx:controller="application.Controller" xmlns:fx="http://javafx.com/fxml">
 	<fx:define>
 		<Font fx:id="font" size="24" />
 	</fx:define>
@@ -21,6 +21,12 @@
 		<Rectangle fill="TRANSPARENT" stroke="GRAY" width="380" height="80"/>
 		<Text fx:id="textField" font="$font"/>
 	</StackPane>
+	
+	<HBox spacing="10" alignment="CENTER">
+		<Button text="pow" prefWidth="80" font="$font" styleClass="green" onAction="#process"/>
+		<Button text="sqrt" prefWidth="80" font="$font" styleClass="green" onAction="#squareRoot"/>
+		<Button text="Clear" prefWidth="170" font="$font" styleClass="round-red" onAction="#clear"/>
+	</HBox>
 	
 	<HBox spacing="10" alignment="CENTER">
 		<Button text="1" prefWidth="80" font="$font" styleClass="glass-grey" onAction="#setNumPad"/>
@@ -44,7 +50,8 @@
 	</HBox>
 	
 	<HBox spacing="10" alignment="CENTER">
-		<Button text="0" prefWidth="170" font="$font" styleClass="glass-grey" onAction="#setNumPad"/>
+		<Button text="0" prefWidth="80" font="$font" styleClass="glass-grey" onAction="#setNumPad"/>
+		<Button text="." prefWidth="80" font="$font" styleClass="glass-grey" onAction="#setNumPad"/>
 		<Button text="=" prefWidth="80" font="$font" styleClass="round-red" onAction="#process"/>
 		<Button text="+" prefWidth="80" font="$font" styleClass="green" onAction="#process"/>
 	</HBox>

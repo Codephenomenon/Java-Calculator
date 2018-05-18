@@ -2,7 +2,7 @@ package application;
 
 public class Model {
 	
-	public static long calculate(long num1, long num2, String operator) {
+	public static double calculate(double num1, double num2, String operator) {
 		switch(operator) {
 			case "-":
 				return num1 - num2;
@@ -16,6 +16,10 @@ public class Model {
 				} else {
 					return num1 / num2;
 				}
+			case "pow":
+				return Math.pow(num1,  num2);
+			case "sqrt":
+				return Math.sqrt(num1);
 		}
 		
 		System.out.println("Operator unknown - " + operator);
